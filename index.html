@@ -3,31 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ars Ligandi | 台灣家事法庭法律科技專家</title>
-    <meta name="description" content="利用AI代理人分析司法院判決趨勢，優化家事法庭訴訟策略。">
+    <title>Ars Ligandi | Legal Tech & AI</title>
+    <meta name="description" content="La alianza perfecta entre el abogado y la Inteligencia Artificial.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Noto Sans TC for professional Taiwan typography -->
+    <!-- Google Fonts: Noto Sans TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #f8fafc, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(90deg, #f8fafc, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body class="bg-white text-slate-900 antialiased">
@@ -36,22 +26,32 @@
     <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7a3 3 0 100-6 3 3 0 000 6zm0 10a3 3 0 100-6 3 3 0 000 6z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                         </svg>
                     </div>
                     <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Ars Ligandi</span>
                 </div>
+                
+                <!-- Nav Links -->
                 <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="#features" class="hover:text-indigo-600 transition-colors">產品功能</a>
-                    <a href="#pricing" class="hover:text-indigo-600 transition-colors">價格方案</a>
-                    <a href="#about" class="hover:text-indigo-600 transition-colors">關於我們</a>
+                    <a href="#projects" class="hover:text-indigo-600 transition-colors i18n" data-zh="專案計畫" data-es="Proyectos" data-en="Projects">專案計畫</a>
+                    <a href="#features" class="hover:text-indigo-600 transition-colors i18n" data-zh="核心優勢" data-es="Ventajas" data-en="Features">核心優勢</a>
+                    <a href="#pricing" class="hover:text-indigo-600 transition-colors i18n" data-zh="方案" data-es="Planes" data-en="Pricing">方案</a>
                 </nav>
-                <div>
-                    <a href="#signup" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm">
-                        免費試用
+
+                <!-- Language Selector & Contact -->
+                <div class="flex items-center gap-4">
+                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-600 font-medium focus:ring-0 cursor-pointer">
+                        <option value="zh">繁體中文</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    <a href="mailto:info@arsligandi.com" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm i18n" data-zh="聯絡我們" data-es="Contactar" data-en="Contact Us">
+                        聯絡我們
                     </a>
                 </div>
             </div>
@@ -60,7 +60,6 @@
 
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-        <!-- Background Decoration -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
             <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-500 blur-[120px]"></div>
             <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-500 blur-[120px]"></div>
@@ -68,202 +67,116 @@
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                以前瞻 AI 技術，<br>
-                <span class="gradient-text">精準掌握家事法庭判決趨勢</span>
+                <span class="i18n block" data-zh="締結人類直覺與" data-es="La alianza entre la intuición humana y" data-en="The alliance of human intuition and">締結人類直覺與</span>
+                <span class="gradient-text i18n" data-zh="人工智慧的完美同盟" data-es="el poder analítico de la IA" data-en="the analytical power of AI">人工智慧的完美同盟</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                透過 AI 代理人深度分析司法院超過 1,000 份真實判決書，將海量法律數據轉化為可執行的訴訟策略。 
-                <span class="block mt-2 text-cyan-400 font-medium">完全無需上傳客戶個資，確保絕對隱私與機密性。</span>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed i18n" data-zh="Ars Ligandi 是一門「連結」的藝術。我們不取代律師，而是將您的法律專業與大數據分析緊密結合，為家事法庭訴訟提供具備壓倒性優勢的策略洞察。" data-es="Ars Ligandi es el arte de 'ligar' o vincular. No sustituimos al abogado; forjamos una alianza entre su experiencia y el análisis masivo de datos para dominar las estrategias del tribunal de familia." data-en="Ars Ligandi is the art of 'linking'. We do not replace lawyers; we forge an alliance between your expertise and big data analytics to dominate family court strategies.">
+                Ars Ligandi 是一門「連結」的藝術。我們不取代律師，而是將您的法律專業與大數據分析緊密結合，為家事法庭訴訟提供具備壓倒性優勢的策略洞察。
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#signup" class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">
-                    立即加入 14 天免費試用
-                </a>
-                <a href="#features" class="bg-slate-800 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-700 transition-all border border-slate-700">
-                    查看分析範例
+            <div class="flex justify-center">
+                <a href="#projects" class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20 i18n" data-zh="探索我們的專案" data-es="Explorar nuestros proyectos" data-en="Explore our projects">
+                    探索我們的專案
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 bg-white">
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">專為家事法庭律師設計</h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">我們將複雜的司法判決轉化為數據洞察，讓您的法律論點更具說服力。</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 i18n" data-zh="當前專案：Ligare 計畫" data-es="Proyecto Actual: Iniciativa Ligare" data-en="Current Project: The Ligare Initiative">當前專案：Ligare 計畫</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto i18n" data-zh="我們目前正致力於研發專為台灣家事法庭設計的「律師-AI 協作系統」。" data-es="Actualmente estamos desarrollando un sistema de 'colaboración Abogado-IA' diseñado específicamente para los tribunales de familia de Taiwán." data-en="We are currently developing a 'Lawyer-AI collaboration system' specifically designed for Taiwan's family courts.">我們目前正致力於研發專為台灣家事法庭設計的「律師-AI 協作系統」。</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">法官判決傾向分析</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        分析特定法官在監護權、財產分配及扶養費案件中的裁量基準，預測潛在判決結果，大幅提升勝訴率。
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 i18n" data-zh="讓 AI 成為您的首席戰略幕僚" data-es="Convirtiendo a la IA en su estratega principal" data-en="Making AI your chief strategist">讓 AI 成為您的首席戰略幕僚</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed i18n" data-zh="「Ligare」在拉丁文中意指連結與結盟。在此專案中，我們利用 AI 代理人深度分析司法院超過 1,000 份真實判決書。AI 負責梳理法官的裁量基準與隱性偏見，而人類律師負責將這些洞察轉化為法庭上的致命一擊。" data-es="'Ligare' significa unir y aliar en latín. En este proyecto, utilizamos agentes de IA para analizar en profundidad más de 1.000 sentencias reales del Yuan Judicial. La IA rastrea los criterios de los jueces, mientras que el abogado humano transforma esos datos en una estrategia invencible." data-en="'Ligare' means to link and ally in Latin. In this project, we use AI agents to deeply analyze over 1,000 real judgments from the Judicial Yuan. AI maps the judges' criteria, while the human lawyer transforms those insights into an invincible strategy.">
+                        「Ligare」在拉丁文中意指連結與結盟。在此專案中，我們利用 AI 代理人深度分析司法院超過 1,000 份真實判決書。AI 負責梳理法官的裁量基準與隱性偏見，而人類律師負責將這些洞察轉化為法庭上的致命一擊。
                     </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-slate-700 font-medium">
+                            <span class="text-indigo-500 mr-2">✓</span>
+                            <span class="i18n" data-zh="人機協作 (Human-in-the-loop) 架構" data-es="Arquitectura de humano en el circuito (Human-in-the-loop)" data-en="Human-in-the-loop architecture">人機協作 (Human-in-the-loop) 架構</span>
+                        </li>
+                        <li class="flex items-start text-slate-700 font-medium">
+                            <span class="text-indigo-500 mr-2">✓</span>
+                            <span class="i18n" data-zh="專注於監護權、財產分配及扶養費分析" data-es="Centrado en custodia, reparto de bienes y manutención" data-en="Focused on custody, property division, and alimony">專注於監護權、財產分配及扶養費分析</span>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+                <div class="w-full md:w-1/2 bg-white rounded-2xl p-6 shadow-inner border border-slate-100 relative">
+                    <!-- Decoración visual del concepto "Ligare" -->
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">訴訟策略優化</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        AI 根據司法院判例自動建議最強有力的論點組合，協助律師在書狀中精準擊中法官關注的關鍵點。
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-2">👤</div>
+                            <span class="text-xs font-bold text-slate-500 i18n" data-zh="人類律師" data-es="Abogado" data-en="Human Lawyer">人類律師</span>
+                        </div>
+                        <div class="h-1 flex-grow bg-gradient-to-r from-slate-200 via-indigo-400 to-slate-200 mx-4 rounded"></div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-2">🤖</div>
+                            <span class="text-xs font-bold text-indigo-500 i18n" data-zh="AI 數據庫" data-es="Base de IA" data-en="AI Database">AI 數據庫</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">隱私與數據安全</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        我們採用去識別化技術，系統僅處理法律邏輯而非個案個資。提供軍事級加密，符合台灣最高法律職業道德標準。
-                    </p>
+                    <p class="text-sm text-slate-500 italic text-center i18n" data-zh="「真正的護城河不是演算法，而是掌握演算法的人類智慧。」" data-es="«El verdadero foso defensivo no es el algoritmo, sino la inteligencia humana que lo dirige.»" data-en="«The true moat is not the algorithm, but the human intelligence orchestrating it.»">「真正的護城河不是演算法，而是掌握演算法的人類智慧。」</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">灵活的部署方案</h2>
-                <p class="text-slate-600">根據您的事務所規模與對隱私的需求選擇最合適的層級。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tier 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">數位副駕駛</h3>
-                    <p class="text-slate-500 text-sm mb-6">適合獨立律師或小型工作室</p>
-                    <div class="text-4xl font-bold text-slate-900 mb-6">NT$ 4,900 <span class="text-lg font-normal text-slate-500">/月</span></div>
-                    <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            雲端 SaaS 存取
-                        </li>
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            標準判決趨勢分析
-                        </li>
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            每月 100 次 AI 策略查詢
-                        </li>
-                    </ul>
-                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-all">立即開始</a>
-                </div>
-
-                <!-- Tier 2 (Highlighted) -->
-                <div class="bg-slate-900 p-8 rounded-2xl border-4 border-indigo-500 shadow-xl flex flex-col relative scale-105">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                        最推薦方案
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">在地堡壘</h3>
-                    <p class="text-slate-400 text-sm mb-6">極致隱私，本地化部署</p>
-                    <div class="text-4xl font-bold text-white mb-6">NT$ 25,000 <span class="text-lg font-normal text-slate-400">/月</span></div>
-                    <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-center text-slate-300 text-sm">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            Mac Studio 本地端部署 (On-Premise)
-                        </li>
-                        <li class="flex items-center text-slate-300 text-sm">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            數據完全不離事務所 (軍事級隱私)
-                        </li>
-                        <li class="flex items-center text-slate-300 text-sm">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            無限次 AI 策略分析
-                        </li>
-                    </ul>
-                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg bg-cyan-500 text-slate-900 font-bold hover:bg-cyan-400 transition-all">申請本地部署</a>
-                </div>
-
-                <!-- Tier 3 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">頂級司法樞紐</h3>
-                    <p class="text-slate-500 text-sm mb-6">針對大型法律事務所</p>
-                    <div class="text-4xl font-bold text-slate-900 mb-6">定制價格</div>
-                    <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            專屬物理伺服器機房
-                        </li>
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            全事務所基礎設施整合
-                        </li>
-                        <li class="flex items-center text-slate-600 text-sm">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            1-on-1 法律 AI 顧問服務
-                        </li>
-                    </ul>
-                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-all">聯繫銷售團隊</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Closing CTA Section -->
-    <section id="signup" class="py-24 bg-white border-t border-slate-100">
+    <!-- Simple Contact / CTA Section -->
+    <section id="contact" class="py-24 bg-slate-900 border-t border-slate-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">準備好提升您的訴訟勝率了嗎？</h2>
-                    <p class="text-slate-400 mb-10">加入台灣領先的 AI 法律分析社群，體驗數據驅動的法律實務。</p>
-                    
-                    <div class="flex flex-col gap-4 max-w-md mx-auto">
-                        <input type="email" placeholder="請輸入您的律師電子郵件" class="px-6 py-4 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-500 outline-none transition-all">
-                        <button class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">
-                            立即獲取 14 天試用權限
-                        </button>
-                    </div>
-                    
-                    <p class="mt-8 text-xs text-slate-500 italic">
-                        ⚠️ 測試版本：請勿輸入任何未公開之案件機密隱私資訊。
-                    </p>
-                </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 i18n" data-zh="準備好結盟了嗎？" data-es="¿Preparado para forjar su alianza?" data-en="Ready to forge your alliance?">準備好結盟了嗎？</h2>
+            <p class="text-slate-400 mb-10 i18n" data-zh="我們不使用繁瑣的表單。如果您對我們的技術感興趣，或希望成為早期測試夥伴，請直接寄信至我們的官方信箱：" data-es="No utilizamos formularios tediosos. Si le interesa nuestra tecnología o desea ser un socio de pruebas, escríbanos directamente a:" data-en="We don't use tedious forms. If you're interested in our tech or want to be an early testing partner, email us directly at:">
+                我們不使用繁瑣的表單。如果您對我們的技術感興趣，或希望成為早期測試夥伴，請直接寄信至我們的官方信箱：
+            </p>
+            
+            <div class="inline-block">
+                <a href="mailto:info@arsligandi.com" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-xl text-xl font-bold transition-all backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    info@arsligandi.com
+                </a>
             </div>
+            <p class="mt-8 text-xs text-slate-500 italic i18n" data-zh="* 我們承諾在 24 小時內由專案負責人親自回覆您的來信。" data-es="* Garantizamos una respuesta personal del director del proyecto en 24 horas." data-en="* We guarantee a personal response from the project lead within 24 hours.">
+                * 我們承諾在 24 小時內由專案負責人親自回覆您的來信。
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-2">
-                    <div class="w-6 h-6 bg-slate-900 rounded flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7a3 3 0 100-6 3 3 0 000 6zm0 10a3 3 0 100-6 3 3 0 000 6z" />
-                        </svg>
-                    </div>
-                    <span class="font-bold text-slate-900">Ars Ligandi</span>
-                </div>
-                <div class="flex space-x-6 text-sm text-slate-500">
-                    <a href="#" class="hover:text-slate-900 transition-colors">隱私權政策</a>
-                    <a href="#" class="hover:text-slate-900 transition-colors">服務條款</a>
-                    <a href="#" class="hover:text-slate-900 transition-colors">聯繫我們</a>
-                </div>
-                <div class="text-sm text-slate-400">
-                    © 2026 Ars Ligandi. All rights reserved. 台北市信義區
-                </div>
-            </div>
+    <footer class="py-12 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+            <p>© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
         </div>
     </footer>
 
+    <!-- JavaScript for Language Switcher -->
+    <script>
+        function changeLanguage(lang) {
+            // Selecciona todos los elementos con la clase 'i18n'
+            const elements = document.querySelectorAll('.i18n');
+            
+            elements.forEach(el => {
+                // Busca el texto correspondiente al idioma seleccionado en los atributos data
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    el.textContent = text;
+                }
+            });
+            
+            // Cambiar el idioma base del HTML para SEO y accesibilidad
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
+        }
+
+        // Inicializar con el idioma del navegador si se desea, por defecto arranca en Chino (zh)
+        // changeLanguage('zh');
+    </script>
 </body>
 </html>
