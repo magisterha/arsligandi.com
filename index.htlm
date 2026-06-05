@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judicial AI | 台灣家事法庭法律科技專家</title>
+    <meta name="description" content="利用AI代理人分析司法院判決趨勢，優化家事法庭訴訟策略。">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Sans TC for professional Taiwan typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #f8fafc, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7a3 3 0 100-6 3 3 0 000 6zm0 10a3 3 0 100-6 3 3 0 000 6z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Judicial AI</span>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#features" class="hover:text-indigo-600 transition-colors">產品功能</a>
+                    <a href="#pricing" class="hover:text-indigo-600 transition-colors">價格方案</a>
+                    <a href="#about" class="hover:text-indigo-600 transition-colors">關於我們</a>
+                </nav>
+                <div>
+                    <a href="#signup" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm">
+                        免費試用
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-500 blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-500 blur-[120px]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                以前瞻 AI 技術，<br>
+                <span class="gradient-text">精準掌握家事法庭判決趨勢</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                透過 AI 代理人深度分析司法院超過 1,000 份真實判決書，將海量法律數據轉化為可執行的訴訟策略。 
+                <span class="block mt-2 text-cyan-400 font-medium">完全無需上傳客戶個資，確保絕對隱私與機密性。</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#signup" class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">
+                    立即加入 14 天免費試用
+                </a>
+                <a href="#features" class="bg-slate-800 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-700 transition-all border border-slate-700">
+                    查看分析範例
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">專為家事法庭律師設計</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">我們將複雜的司法判決轉化為數據洞察，讓您的法律論點更具說服力。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">法官判決傾向分析</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        分析特定法官在監護權、財產分配及扶養費案件中的裁量基準，預測潛在判決結果，大幅提升勝訴率。
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">訴訟策略優化</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        AI 根據司法院判例自動建議最強有力的論點組合，協助律師在書狀中精準擊中法官關注的關鍵點。
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-indigo-300 transition-all group">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">隱私與數據安全</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        我們採用去識別化技術，系統僅處理法律邏輯而非個案個資。提供軍事級加密，符合台灣最高法律職業道德標準。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">灵活的部署方案</h2>
+                <p class="text-slate-600">根據您的事務所規模與對隱私的需求選擇最合適的層級。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">數位副駕駛</h3>
+                    <p class="text-slate-500 text-sm mb-6">適合獨立律師或小型工作室</p>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">NT$ 4,900 <span class="text-lg font-normal text-slate-500">/月</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            雲端 SaaS 存取
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            標準判決趨勢分析
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            每月 100 次 AI 策略查詢
+                        </li>
+                    </ul>
+                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-all">立即開始</a>
+                </div>
+
+                <!-- Tier 2 (Highlighted) -->
+                <div class="bg-slate-900 p-8 rounded-2xl border-4 border-indigo-500 shadow-xl flex flex-col relative scale-105">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                        最推薦方案
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">在地堡壘</h3>
+                    <p class="text-slate-400 text-sm mb-6">極致隱私，本地化部署</p>
+                    <div class="text-4xl font-bold text-white mb-6">NT$ 25,000 <span class="text-lg font-normal text-slate-400">/月</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            Mac Studio 本地端部署 (On-Premise)
+                        </li>
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            數據完全不離事務所 (軍事級隱私)
+                        </li>
+                        <li class="flex items-center text-slate-300 text-sm">
+                            <svg class="h-5 w-5 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            無限次 AI 策略分析
+                        </li>
+                    </ul>
+                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg bg-cyan-500 text-slate-900 font-bold hover:bg-cyan-400 transition-all">申請本地部署</a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">頂級司法樞紐</h3>
+                    <p class="text-slate-500 text-sm mb-6">針對大型法律事務所</p>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">定制價格</div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            專屬物理伺服器機房
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            全事務所基礎設施整合
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            1-on-1 法律 AI 顧問服務
+                        </li>
+                    </ul>
+                    <a href="#signup" class="block text-center py-3 px-4 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-all">聯繫銷售團隊</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing CTA Section -->
+    <section id="signup" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">準備好提升您的訴訟勝率了嗎？</h2>
+                    <p class="text-slate-400 mb-10">加入台灣領先的 AI 法律分析社群，體驗數據驅動的法律實務。</p>
+                    
+                    <div class="flex flex-col gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="請輸入您的律師電子郵件" class="px-6 py-4 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-500 outline-none transition-all">
+                        <button class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">
+                            立即獲取 14 天試用權限
+                        </button>
+                    </div>
+                    
+                    <p class="mt-8 text-xs text-slate-500 italic">
+                        ⚠️ 測試版本：請勿輸入任何未公開之案件機密隱私資訊。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-slate-900 rounded flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7a3 3 0 100-6 3 3 0 000 6zm0 10a3 3 0 100-6 3 3 0 000 6z" />
+                        </svg>
+                    </div>
+                    <span class="font-bold text-slate-900">Judicial AI</span>
+                </div>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="#" class="hover:text-slate-900 transition-colors">隱私權政策</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">服務條款</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">聯繫我們</a>
+                </div>
+                <div class="text-sm text-slate-400">
+                    © 2024 Judicial AI. All rights reserved. 台北市信義區
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
