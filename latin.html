@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ars Ligandi | AI Assisted Latin Platform</title>
-    <meta name="description" content="Ecosistema inteligente de aprendizaje de latín basado en el ritmo cognitivo y cálculo estadístico.">
+    <title>Ars Ligandi | AI Assisted Classical Languages</title>
+    <meta name="description" content="Ecosistema inteligente de aprendizaje de latín y griego clásico basado en diálogo e input masivo.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
         body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
-        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-        .gradient-text-emerald { background: linear-gradient(90deg, #a7f3d0, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .font-classic { font-family: 'Cormorant Garamond', serif; }
+        .glass-effect { background: rgba(250, 248, 244, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        /* Gradiente dorado para texto inspirado en el latón/oro romano */
+        .gradient-text-gold { background: linear-gradient(90deg, #fde68a, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#faf8f4] text-stone-900 antialiased">
 
-    <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
+    <header class="fixed w-full z-50 glass-effect border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-emerald-900 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-xs">Ω</span>
+                    <div class="w-8 h-8 bg-rose-900 rounded flex items-center justify-center border border-rose-800">
+                        <span class="text-amber-50 font-classic font-bold text-lg">Ω</span>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Ars Ligandi</span>
+                    <span class="text-xl font-classic font-bold tracking-tight text-rose-950 uppercase">Ars Ligandi</span>
                 </div>
                 
-                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="proyectos.html" class="hover:text-emerald-600 transition-colors flex items-center gap-1">
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                    <a href="proyectos.html" class="hover:text-rose-800 transition-colors flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
@@ -40,7 +42,7 @@
                 </nav>
 
                 <div class="flex items-center gap-4">
-                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-600 font-medium focus:ring-0 cursor-pointer outline-none">
+                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-stone-600 font-medium focus:ring-0 cursor-pointer outline-none">
                         <option value="zh">繁體中文</option>
                         <option value="en">English</option>
                         <option value="es">Español</option>
@@ -50,72 +52,103 @@
         </div>
     </header>
 
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-900">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
-            <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-500 blur-[130px]"></div>
-        </div>
-
-        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest block mb-3 i18n" data-zh="教育科技與古典語言學的全新範式" data-es="Filología Clásica y Computación Avanzada" data-en="Classical Philology & Advanced Computing">教育科技與古典語言學的全新範式</span>
-            <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-                <span class="i18n block" data-zh="人工智慧輔助拉丁文教學" data-es="Clases de Latín con Asistencia de IA" data-en="AI-Assisted Latin Ecosystem">人工智慧輔助拉丁文教學</span>
-                <span class="gradient-text-emerald i18n" data-zh="基於統計偏誤與個人化節奏的深度連結" data-es="Estrategia Didáctica basada en el Cálculo Estadístico" data-en="Statistical Modeling & Tailored Cognitive Pacing">基於統計偏誤與個人化節奏的深度連結</span>
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-stone-900 bg-[url('image_90f362.jpg')] bg-cover bg-center bg-fixed">
+        <div class="absolute inset-0 bg-stone-950/75 mix-blend-multiply"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-amber-300/80 text-xs font-bold uppercase tracking-widest block mb-4 border-b border-amber-300/20 inline-block pb-1 i18n" data-zh="教育科技與古典語言學的全新範式" data-es="Filología Clásica y Computación Avanzada" data-en="Classical Philology & Advanced Computing">教育科技與古典語言學的全新範式</span>
+            
+            <h1 class="text-4xl md:text-6xl font-classic font-bold text-white leading-tight mb-6 tracking-wide drop-shadow-lg">
+                <span class="i18n block mb-2" data-zh="拉丁文與古希臘文的蘇格拉底式學習" data-es="Aprendizaje Socrático de Latín y Griego Clásico" data-en="Socratic Learning of Latin & Ancient Greek">Aprendizaje Socrático de Latín y Griego Clásico</span>
+                <span class="gradient-text-gold i18n italic" data-zh="透過大量對話與計算統計推動" data-es="Impulsado por Diálogo Masivo y Cálculo Estadístico" data-en="Driven by Massive Dialogue & Statistical Computing">Impulsado por Diálogo Masivo y Cálculo Estadístico</span>
             </h1>
-            <p class="text-base md:text-lg text-slate-400 max-w-3xl mx-auto mb-4 leading-relaxed i18n" data-zh="遠離通用、死板且缺乏溫度的傳統大班制教材。本計畫深入挖掘大語言模型的計算潛力，精確描繪每位學生的核心盲點。" data-es="Adiós a los métodos de enseñanza genéricos e impersonalizados. Este proyecto aprovecha el potencial de computación y el cálculo estadístico de la IA para saber con extrema precisión las necesidades lingüísticas y el ritmo exacto de cada estudiante." data-en="Dismantling generic and impersonal textbooks. This initiative harnesses the computational and statistical architecture of AI to map out text comprehension speeds and learning curves down to individual error vectors.">
-                遠離通用、死板且缺乏溫度的傳統大班制教材。本計畫深入挖掘大語言模型的計算潛力，精確描繪每位學生的核心盲點。
+            
+            <p class="text-base md:text-xl text-stone-200 max-w-3xl mx-auto mb-4 leading-relaxed font-light drop-shadow-md i18n" data-zh="我們的課程核心是一場深度對話。這場對話將產生龐大的數據輸入，讓 AI 為您打造完全客製化的學習介面，使學習拉丁文與希臘文變得無比輕鬆，徹底摒棄通用且缺乏溫度的教材。" data-es="El sistema de nuestra clase consiste en un diálogo continuo que genera un input masivo para la IA. Esta tecnología crea un Front-End a tu medida, haciendo que estudiar latín y griego sea mucho más sencillo, natural y orgánico que con los obsoletos materiales genéricos y despersonalizados." data-en="Our class system is a continuous dialogue that generates massive input for the AI. This technology builds a custom Front-End tailored to you, making studying Latin and Greek significantly easier and more organic than using obsolete, depersonalized generic materials.">
+                El sistema de nuestra clase consiste en un diálogo continuo que genera un input masivo para la IA. Esta tecnología crea un Front-End a tu medida, haciendo que estudiar latín y griego sea mucho más sencillo, natural y orgánico que con los obsoletos materiales genéricos y despersonalizados.
             </p>
         </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#faf8f4] to-transparent z-10"></div>
     </section>
 
-    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3 i18n" data-zh="系統運作架構藍圖" data-es="Arquitectura del Flujo de Aprendizaje" data-en="Learning Flow Architecture">系統運作架構藍圖</h2>
-            <p class="text-slate-500 text-sm i18n" data-zh="將課堂互動數據自動轉化為高度客製化的離線實戰引擎" data-es="Transformación de datos en tiempo real a un motor interactivo fuera de clase." data-en="Converting real-time classroom interactions into an offline practice pipeline.">將課堂互動數據自動轉化為高度客製化的離線實戰引擎</p>
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-classic font-bold text-rose-950 mb-3 i18n" data-zh="系統運作架構藍圖" data-es="Arquitectura de la Alianza Cognitiva" data-en="Cognitive Alliance Architecture">系統運作架構藍圖</h2>
+            <div class="w-24 h-1 bg-amber-600 mx-auto mb-4"></div>
+            <p class="text-stone-500 text-base max-w-2xl mx-auto i18n" data-zh="將課堂互動數據自動轉化為高度客製化的離線實戰引擎" data-es="Transformamos la dialéctica de la clase en un motor interactivo fuera del aula." data-en="We transform the dialectic of the classroom into an interactive offline engine.">將課堂互動數據自動轉化為高度客製化的離線實戰引擎</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">01</div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="遠端 Zoom 互動與智能筆記" data-es="Clase Sincrónica y Notas" data-en="Synchronous Session & Analytics">遠端 Zoom 互動與智能筆記</h3>
-                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="在進行線上拉丁文授業時，系統會同時整理語音節奏、即時對答數據與課堂文本摘要，完整捕捉學生的答題盲點與語意理解盲區。" data-es="Durante la sesión en Zoom, se recopilan notas de voz y anotaciones estructuradas que alimentan el perfil analítico de la sesión, midiendo la velocidad de asimilación del alumno." data-en="During the Zoom class, text tracks and voice inflections are parsed to generate semantic notes mapping out structural performance and real-time conceptual intake.">
-                    在進行線上拉丁文授業時，系統會同時整理語音節奏、即時對答數據與課堂文本摘要，完整捕捉學生的答題盲點與語意理解盲區。
+            <div class="bg-white p-8 rounded-sm shadow-md border border-stone-200 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-rose-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="w-12 h-12 bg-rose-50 text-rose-900 font-classic font-bold border border-rose-200 rounded-full flex items-center justify-center mb-6 text-xl">I</div>
+                <h3 class="text-xl font-classic font-bold text-stone-900 mb-3 i18n" data-zh="蘇格拉底對話與大量輸入" data-es="Diálogo Socrático e Input Masivo" data-en="Socratic Dialogue & Massive Input">Diálogo Socrático e Input Masivo</h3>
+                <p class="text-stone-600 text-sm leading-relaxed i18n" data-zh="線上課程並非單向授課，而是一場深度對話。透過 Zoom 的互動，我們產生龐大的語義輸入 (Massive Input)，系統會實時捕捉你的語音節奏與理解盲區。" data-es="La clase en Zoom no es una lección unidireccional, es un diálogo. Esta interacción genera un input masivo y estructurado que permite al sistema capturar en tiempo real tu velocidad de asimilación y tus necesidades exactas." data-en="The Zoom class is not a one-way lecture, but a dialogue. This interaction generates massive structured input, allowing the system to capture your assimilation speed and exact needs in real-time.">
+                    La clase en Zoom no es una lección unidireccional, es un diálogo. Esta interacción genera un input masivo y estructurado que permite al sistema capturar en tiempo real tu velocidad de asimilación y tus necesidades exactas.
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">02</div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="動態編譯專屬 Front-End" data-es="Compilación de Front-End" data-en="Dynamic Front-End Compilation">動態編譯專屬 Front-End</h3>
-                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="課堂結束後，系統會自動生成並交付一個精美的客製化前端介面。該介面封裝了針對該學生當前盲點而精心設計的專屬提示詞（Prompts）。" data-es="Al terminar la sesión, el motor compila un front-end interactivo que se le entrega al estudiante, adaptando la interfaz directamente a las flaquezas gramaticales detectadas." data-en="Post-class, the system instantly builds a highly context-aware front-end playground tailored with precise algorithmic prompt profiles targeting structural bottlenecks.">
-                    課堂結束後，系統會自動生成並交付一個精美的客製化前端介面。該介面封裝了針對該學生當前盲點而精心設計的專屬提示詞（Prompts）。
+            <div class="bg-white p-8 rounded-sm shadow-md border border-stone-200 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-rose-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="w-12 h-12 bg-rose-50 text-rose-900 font-classic font-bold border border-rose-200 rounded-full flex items-center justify-center mb-6 text-xl">II</div>
+                <h3 class="text-xl font-classic font-bold text-stone-900 mb-3 i18n" data-zh="動態生成專屬 Front-End" data-es="Generación de Front-End a Medida" data-en="Custom Front-End Generation">Generación de Front-End a Medida</h3>
+                <p class="text-stone-600 text-sm leading-relaxed i18n" data-zh="課堂結束後，AI 會利用上述輸入自動編譯出一個專屬於你的互動介面。該介面包含了為你量身打造的語法提示詞（Prompts）與學習路徑。" data-es="Con ese input masivo, la IA crea automáticamente un Front-End diseñado exclusivamente para ti. Esta interfaz encapsula 'prompts' generados matemáticamente para atacar tus flaquezas sintácticas." data-en="Using that massive input, the AI automatically creates a Front-End designed exclusively for you. This interface encapsulates mathematically generated prompts to attack your syntactic weaknesses.">
+                    Con ese input masivo, la IA crea automáticamente un Front-End diseñado exclusivamente para ti. Esta interfaz encapsula 'prompts' generados matemáticamente para atacar tus flaquezas sintácticas.
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">03</div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="LLM 離線實戰與客製化練習" data-es="Práctica Con Modelo de Lenguaje" data-en="LLM Practice & Deep Learning">LLM 離線實戰與客製化練習</h3>
-                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="學生可在課外通過該前端與大語言模型進行深度互動。无论是傳統語法解析，還是基於提示詞的對話練習，完全契合其個人的步調，做到真正的因材施教。" data-es="Fuera de clase, el estudiante practica con un modelo de lenguaje. Los ejercicios tradicionales o interactivos están totalmente guiados por la IA para reforzar los puntos exactos requeridos." data-en="Outside class, the student engages with an LLM via the compiled front-end. Traditional morphology or syntax trees are customized adaptively according to the calculated learning curve.">
-                    學生可在課外通過該前端與大語言模型進行深度互動。无论是傳統語法解析，還是基於提示詞的對話練習，完全契合其個人的步調，做到真正的因材施教。
+            <div class="bg-white p-8 rounded-sm shadow-md border border-stone-200 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-rose-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="w-12 h-12 bg-rose-50 text-rose-900 font-classic font-bold border border-rose-200 rounded-full flex items-center justify-center mb-6 text-xl">III</div>
+                <h3 class="text-xl font-classic font-bold text-stone-900 mb-3 i18n" data-zh="直覺且個人化的課後學習" data-es="Estudio Sencillo y Personalizado" data-en="Intuitive & Personalized Study">Estudio Sencillo y Personalizado</h3>
+                <p class="text-stone-600 text-sm leading-relaxed i18n" data-zh="從此告別枯燥、非客製化的教科書。你在專屬介面中與語言模型進行的練習，能讓掌握拉丁文與希臘文變得無比直覺且高效。" data-es="Olvídate de los materiales genéricos. Estudiar latín y griego se vuelve mucho más sencillo; las prácticas fluyen al ritmo exacto que tu mente requiere, haciendo que el dominio del idioma sea natural y rápido." data-en="Forget generic materials. Studying Latin and Greek becomes much easier; practices flow at the exact pace your mind requires, making language mastery natural and fast.">
+                    Olvídate de los materiales genéricos. Estudiar latín y griego se vuelve mucho más sencillo; las prácticas fluyen al ritmo exacto que tu mente requiere, haciendo que el dominio del idioma sea natural y rápido.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-white border-t border-b border-slate-200">
+    <section class="py-16 bg-stone-100 border-t border-b border-stone-300">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-xl font-bold text-slate-900 mb-6 text-center i18n" data-zh="為何選擇 Ars Ligandi 的拉丁文智學系統？" data-es="¿Por qué la aproximación de Ars Ligandi al Latín?" data-en="Why Ars Ligandi's Approach to Latin?">為何選擇 Ars Ligandi 的拉丁文智學系統？</h3>
-            <div class="space-y-6 text-slate-700 leading-relaxed text-sm">
-                <p class="i18n" data-zh="傳統的拉丁文教材（如 generic text-books）往往無視學生的母語背景與認知速度差異，提供千篇一律的語法灌輸。我們深知拉丁文作為一種高度屈折語（Highly Inflected Language），其格位變化與句法結構需要極其严密的邏輯矩陣思維。" data-es="Los métodos genéricos e impersonalizados de latín ignoran el hecho de que cada mente procesa las declinaciones y la sintaxis a ritmos categóricamente distintos. Al utilizar el cálculo estadístico de la IA, podemos trazar un mapa de asimilación sintáctica en tiempo real." data-en="Generic Latin textbooks ignore individual cognitive variances in decoding high-inflection language syntaxes. By blending structural philology with statistical ML modeling, we provide clear-cut vector adjustments for maximum retention.">
-                    傳統的拉丁文教材（如 generic text-books）往往無視學生的母語背景與認知速度差異，提供千篇一律的語法灌輸。我們深知拉丁文作為一種高度屈折語（Highly Inflected Language），其格位變化與句法結構需要極其严密的邏輯矩陣思維。
+            <div class="flex justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-rose-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-classic font-bold text-stone-900 mb-8 text-center i18n" data-zh="為何選擇 Ars Ligandi 的古典語言系統？" data-es="El Fundamento de nuestra Metodología" data-en="The Foundation of our Methodology">為何選擇 Ars Ligandi 的古典語言系統？</h3>
+            
+            <div class="space-y-6 text-stone-700 leading-relaxed text-base font-light">
+                <p class="i18n drop-cap" data-zh="傳統的教材往往無視學生的認知速度差異。我們深知拉丁文與古希臘文作為高度屈折語，其格位變化與句法結構需要嚴密的邏輯。透過對話產生的大量輸入，AI 能繪製出你的專屬認知地圖。" data-es="Los métodos convencionales ignoran una verdad fundamental: cada mente procesa las declinaciones del latín y la morfología del griego clásico a ritmos categóricamente distintos. Al utilizar la capacidad de cálculo de la IA procesando el input masivo de nuestras charlas, trazamos un mapa cognitivo en tiempo real." data-en="Conventional methods ignore a fundamental truth: each mind processes Latin declensions and Ancient Greek morphology at distinct paces. By using AI to process the massive input from our dialogue, we map your cognition in real-time.">
+                    <span class="font-classic text-4xl float-left mr-2 text-rose-900">L</span>os métodos convencionales ignoran una verdad fundamental: cada mente procesa las declinaciones del latín y la morfología del griego clásico a ritmos categóricamente distintos. Al utilizar la capacidad de cálculo de la IA procesando el input masivo de nuestras charlas, trazamos un mapa cognitivo en tiempo real.
                 </p>
-                <p class="i18n" data-zh="透過將課堂語音筆記數據化，AI 能夠精準計算出學生的語法偏誤概率。生成的課後互動 Front-end，讓大語言模型不再只是模糊地回答問題，而是扮演一位完全洞悉學生目前學習瓶頸的專屬蘇格拉底式導師。" data-es="Las notas de voz tomadas y procesadas actúan como un sensor filológico. El front-end resultante canaliza el potencial computacional del LLM para guiar al estudiante de forma ultra-específica, optimizando cada minuto invertido fuera del horario síncronico." data-en="Voice notes and diagnostic notes act as philological sensors. The generated front-end channels the LLM capacity to act as a tailored Socratic guide, optimizing every minute spent outside the synchronous class.">
-                    透過將課堂語音筆記數據化，AI 能夠精準計算出學生的語法偏誤概率。生成的課後互動 Front-end，讓大語言模型不再只是模糊地回答問題，而是扮演一位完全洞悉學生目前學習瓶頸的專屬蘇格拉底式導師。
+                <p class="i18n" data-zh="生成的課後互動 Front-end，讓大語言模型不再只是模糊地回答問題，而是扮演一位完全洞悉學生目前學習瓶頸的專屬蘇格拉底式導師，讓學習這兩門古典語言變得前所未有的簡單。" data-es="El Front-End resultante canaliza el poder del modelo de lenguaje para que actúe no como un libro estático, sino como un guía Socrático que te conoce perfectamente; haciendo que el estudio del latín y el griego deje de ser una barrera y se convierta en una experiencia fluida y personalizada." data-en="The resulting Front-End channels the LLM's power to act not as a static book, but as a Socratic guide who knows you perfectly; turning the study of Latin and Greek from a barrier into a fluid, personalized experience.">
+                    El Front-End resultante canaliza el poder del modelo de lenguaje para que actúe no como un libro estático, sino como un guía Socrático que te conoce perfectamente; haciendo que el estudio del latín y el griego deje de ser una barrera y se convierta en una experiencia fluida y personalizada.
                 </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-950 text-center text-sm text-slate-500">
-        <p>© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
+    <section class="py-20 bg-[#f4f1ea]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center border border-amber-900/10 bg-white p-10 lg:p-14 rounded-sm shadow-sm relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            
+            <h2 class="text-2xl md:text-3xl font-classic font-bold text-rose-950 mb-4 mt-2 i18n" data-zh="開啟您的古典語言學習之旅" data-es="Inicia tu dominio del Latín y el Griego Clásico" data-en="Begin your Classical Languages Journey">Inicia tu dominio del Latín y el Griego Clásico</h2>
+            <p class="text-stone-500 mb-8 i18n font-light" data-zh="無論是學術研究、法學溯源，或是純粹對語言結構的熱愛，我們都為您量身打造專屬課程。" data-es="Ya sea por rigor académico, investigación o pura pasión por la arquitectura de las lenguas clásicas. Contáctame directamente para evaluar tu perfil y diseñar tu ruta de aprendizaje." data-en="Whether for academic rigor, research, or pure passion for the architecture of classical languages. Contact me directly to evaluate your profile and design your learning path.">
+                Ya sea por rigor académico, investigación o pura pasión por la arquitectura de las lenguas clásicas. Contáctame directamente para evaluar tu perfil y diseñar tu ruta de aprendizaje.
+            </p>
+            
+            <a href="mailto:info@arsligandi.com" class="inline-flex items-center gap-2 bg-rose-900 text-amber-50 px-8 py-4 text-lg font-classic tracking-wider hover:bg-rose-800 transition-colors shadow-md border border-rose-950">
+                <span class="i18n" data-zh="聯繫導師" data-es="info@arsligandi.com" data-en="Contact Instructor">info@arsligandi.com</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-stone-950 text-center text-stone-400 font-classic">
+        <p>© 2026 Ars Ligandi. <span class="i18n italic" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
     </footer>
 
     <script>
