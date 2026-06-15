@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ars Ligandi | Proyectos</title>
-    <meta name="description" content="Proyectos de vanguardia en LegalTech, EdTech y análisis computacional.">
+    <title>Ars Ligandi | Legal Tech, Philology & AI</title>
+    <meta name="description" content="La alianza perfecta entre el intelecto humano y la Inteligencia Artificial.">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Noto Sans TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -20,13 +18,11 @@
         .gradient-text { background: linear-gradient(90deg, #f8fafc, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-white text-slate-900 antialiased">
 
-    <!-- Header/Navigation -->
     <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,158 +32,123 @@
                     <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Ars Ligandi</span>
                 </div>
                 
-                <!-- Nav Links -->
                 <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="index.html" class="hover:text-indigo-600 transition-colors flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                        </svg>
-                        <span class="i18n" data-zh="回首頁" data-es="Volver al inicio" data-en="Back to Home">回首頁</span>
-                    </a>
+                    <a href="proyectos.html" class="hover:text-indigo-600 transition-colors i18n" data-zh="專案計畫" data-es="Proyectos" data-en="Projects">專案計畫</a>
+                    <a href="#pricing" class="hover:text-indigo-600 transition-colors i18n" data-zh="專屬方案" data-es="Planes" data-en="Pricing">專屬方案</a>
                 </nav>
 
-                <!-- Language Selector -->
                 <div class="flex items-center gap-4">
                     <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-600 font-medium focus:ring-0 cursor-pointer outline-none">
                         <option value="zh">繁體中文</option>
                         <option value="en">English</option>
                         <option value="es">Español</option>
                     </select>
+                    <a href="#contact" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm i18n" data-zh="聯絡我們" data-es="Contactar" data-en="Contact Us">
+                        聯絡我們
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Page Title Section -->
-    <section class="pt-32 pb-12 bg-slate-900 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 i18n" data-zh="研發專案與技術藍圖" data-es="Proyectos y Arquitectura Técnica" data-en="Projects & Technical Architecture">研發專案與技術藍圖</h1>
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto i18n" data-zh="探索我們如何透過前瞻的 AI 技術與嚴謹的結構邏輯，重塑現代法律策略與古典語言學習。" data-es="Explore cómo redefinimos la estrategia procesal y el aprendizaje de lenguas clásicas mediante inteligencia artificial avanzada." data-en="Explore how we redefine litigation strategy and classical language acquisition through advanced artificial intelligence.">
-                探索我們如何透過前瞻的 AI 技術與嚴謹的結構邏輯，重塑現代法律策略與古典語言學習。
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-500 blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-500 blur-[120px]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                <span class="i18n block" data-zh="締結人類直覺與" data-es="La alianza entre la intuición humana y" data-en="The alliance of human intuition and">締結人類直覺與</span>
+                <span class="gradient-text i18n" data-zh="人工智慧的完美同盟" data-es="el poder analítico de la IA" data-en="the analytical power of AI">人工智慧的完美同盟</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed i18n" data-zh="Ars Ligandi 是一門「連結」的藝術。我們將人類深邃的認知結構、法律專業與古典語言學，與大數據及計算統計型架構緊密結合，打造顛覆傳統的智能化解決方案。" data-es="Ars Ligandi es el arte de 'ligar' o vincular. Forjamos una alianza entre la experiencia humana en el ámbito legal y filológico con el análisis masivo de datos y el cálculo estadístico de la IA." data-en="Ars Ligandi is the art of 'linking'. We forge a deep alliance between human expertise in legal and philological domains and the massive analytical power of statistical AI.">
+                Ars Ligandi 是一門「連結」的藝術。我們將人類深邃的認知結構、法律專業與古典語言學，與大數據及計算統計型架構緊密結合，打造顛覆傳統的智能化解決方案。
             </p>
+            <div class="flex justify-center">
+                <a href="proyectos.html" class="bg-cyan-500 text-slate-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20 i18n" data-zh="探索我們的專案" data-es="Explorar nuestros proyectos" data-en="Explore our projects">
+                    探索我們的專案
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Project 1: Ligare -->
-    <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 overflow-hidden relative">
-                <div class="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-6 py-2 rounded-bl-2xl uppercase tracking-widest i18n" data-zh="當前主力專案 I" data-es="Proyecto Principal I" data-en="Flagship Project I">
-                    當前主力專案 I
-                </div>
+    <section id="pricing" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 i18n" data-zh="專屬部署與客製化方案" data-es="Planes de Despliegue" data-en="Deployment Plans">專屬部署與客製化方案</h2>
+                <p class="text-slate-600 i18n" data-zh="針對高端法律事務所及精準學術需求量身打造的專屬技術服務。" data-es="Servicios tecnológicos exclusivos a medida para firmas de nivel y necesidades académicas de precisión." data-en="Exclusive technological services tailored for premium law firms and high-precision academic needs.">針對高端法律事務所及精準學術需求量身打造的專屬技術服務。</p>
+            </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-indigo-500 relative">
+                <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-indigo-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    Custom Ecosystem
+                </div>
+                
+                <div class="text-center md:text-left flex flex-col md:flex-row justify-between items-center mb-10 border-b border-slate-100 pb-10 gap-6">
                     <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">LegalTech</span>
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Multi-Agent AI</span>
-                        </div>
-                        <h2 class="text-3xl font-bold text-slate-900 mb-6 i18n" data-zh="Ligare 計畫：家事法庭預測樞紐" data-es="Iniciativa Ligare: Eje Predictivo de Familia" data-en="The Ligare Initiative: Family Court Hub">Ligare 計畫：家事法庭預測樞紐</h2>
-                        <p class="text-slate-600 mb-6 leading-relaxed i18n" data-zh="「Ligare」在拉丁文中意指連結與結盟。此專案專為台灣家事法庭設計，建立了一個由人類律師主導、多重 AI 代理人輔助的高階檢索增強生成（RAG）系統。" data-es="'Ligare' significa unir y aliar en latín. Diseñado para los tribunales de familia de Taiwán, este proyecto establece un sistema avanzado de Generación Aumentada por Recuperación (RAG) dirigido por abogados y asistido por múltiples agentes de IA." data-en="'Ligare' means to link and ally in Latin. Designed for Taiwan's family courts, this project establishes an advanced Retrieval-Augmented Generation (RAG) system led by human lawyers and assisted by multiple AI agents.">
-                            「Ligare」在拉丁文中意指連結與結盟。此專案專為台灣家事法庭設計，建立了一個由人類律師主導、多重 AI 代理人輔助的高階檢索增強生成（RAG）系統。
-                        </p>
-                        <p class="text-slate-600 mb-8 leading-relaxed i18n" data-zh="我們將司法院的龐大判決書庫轉化為向量資料庫。當律師輸入案件背景時，系統會自動比對法官過去的裁量基準，為訴訟狀提供最具說服力的論點組合。" data-es="Transformamos el inmenso archivo de sentencias del Yuan Judicial en una base de datos vectorial. Cuando el abogado introduce el contexto del caso, el sistema compara automáticamente los criterios históricos del juez." data-en="We transform the Judicial Yuan's massive archive of judgments into a vectorized database. When the lawyer inputs the case context, the system automatically compares the judge's historical criteria.">
-                            我們將司法院的龐大判決書庫轉化為向量資料庫。當律師輸入案件背景時，系統會自動比對法官過去的裁量基準，為訴訟狀提供最具說服力的論點組合。
-                        </p>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2 i18n" data-zh="AI 代理人與知識庫整合系統" data-es="Sistemas Avanzados de Agentes de IA" data-en="Advanced AI Agent Systems">AI 代理人與知識庫整合系統</h3>
+                        <p class="text-slate-500 text-sm i18n" data-zh="引進高階 RAG 與統計學習架構" data-es="Implementación de arquitecturas RAG y aprendizaje estadístico" data-en="Implementation of tailored RAG and statistical learning architectures">引進高階 RAG 與統計學習架構</p>
                     </div>
+                    <div class="text-center md:text-right">
+                        <div class="text-3xl font-bold text-slate-900 i18n" data-zh="專案報價" data-es="Precio a consultar" data-en="Custom Pricing">專案報價</div>
+                        <p class="text-slate-500 text-sm mt-1 i18n" data-zh="依據規模與需求客製化" data-es="Personalizado según las necesidades del proyecto" data-en="Customized based on project goals">依據規模與需求客製化</p>
+                    </div>
+                </div>
 
-                    <!-- Visual Graphic -->
-                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-                        <div class="flex flex-col gap-4 relative">
-                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
-                                <div class="w-12 h-12 bg-slate-900 text-white rounded-lg flex items-center justify-center font-bold text-xl">👤</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 i18n" data-zh="戰略制定者 (人類律師)" data-es="Estratega (Abogado)" data-en="Strategist (Human Lawyer)">戰略制定者 (人類律師)</h4>
-                                    <p class="text-xs text-slate-500 i18n" data-zh="定義案件框架與目標" data-es="Define el marco y los objetivos del caso" data-en="Defines the case framework and goals">定義案件框架與目標</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center -my-2"><div class="w-1 h-8 bg-indigo-200"></div></div>
-                            <div class="bg-indigo-50 p-4 rounded-xl shadow-sm border border-indigo-100 flex items-center gap-4 ml-8">
-                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-lg flex items-center justify-center font-bold text-xl">🤖</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 i18n" data-zh="AI 檢索代理人" data-es="Agente de Recuperación IA" data-en="AI Retrieval Agent">AI 檢索代理人</h4>
-                                    <p class="text-xs text-indigo-600 i18n" data-zh="在向量庫中搜尋相似判例" data-es="Busca precedentes en la base de datos vectorial" data-en="Searches precedents in the vector database">在向量庫中搜尋相似判例</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="flex items-start">
+                        <svg class="h-6 w-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span class="text-slate-700 i18n" data-zh="專為家事法庭或古典語意檢索訓練的專屬模型" data-es="Modelos de IA adaptados a criterios judiciales o semántica clásica" data-en="AI models customized for court criteria or classical semantics">專為家事法庭或古典語意檢索訓練的專屬模型</span>
                     </div>
+                    <div class="flex items-start">
+                        <svg class="h-6 w-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span class="text-slate-700 i18n" data-zh="本地端或私有雲部署，確保絕對機密" data-es="Despliegue local o nube privada para confidencialidad absoluta" data-en="Local or private cloud deployment for absolute confidentiality">本地端或私有雲部署，確保絕對機密</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="h-6 w-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span class="text-slate-700 i18n" data-zh="與使用者現有工作流程無縫整合" data-es="Integración perfecta con el flujo de trabajo del usuario" data-en="Seamless integration with the user's specific workflow">與使用者現有工作流程無縫整合</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="h-6 w-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span class="text-slate-700 i18n" data-zh="專屬技術顧問與持續迭代優化" data-es="Consultoría técnica dedicada y optimización continua" data-en="Dedicated technical consulting and continuous optimization">專屬技術顧問與持續迭代優化</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#contact" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-slate-800 transition-all w-full md:w-auto i18n" data-zh="預約專人諮詢" data-es="Solicitar consulta" data-en="Schedule a consultation">預約專人諮詢</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project 2: Latin AI (NUEVO) -->
-    <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 overflow-hidden relative">
-                <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-6 py-2 rounded-bl-2xl uppercase tracking-widest i18n" data-zh="當前主力專案 II" data-es="Proyecto Principal Ii" data-en="Flagship Project II">
-                    當前主力專案 II
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-                    <!-- Visual Graphic first for alternating layout structure on large screens -->
-                    <div class="order-2 lg:order-1 bg-slate-50 rounded-2xl p-6 border border-slate-200">
-                        <div class="flex flex-col gap-4">
-                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
-                                <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xl">🎓</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 i18n" data-zh="即時課堂互動 (Zoom + 語步分析)" data-es="Clase en Vivo (Zoom + Notas de Voz)" data-en="Live Session (Zoom + Voice Analytics)">即時課堂互動 (Zoom + 語步分析)</h4>
-                                    <p class="text-xs text-slate-500 i18n" data-zh="動態記錄學生理解步調與盲點" data-es="Captura el ritmo y necesidades del estudiante" data-en="Captures student's individual learning pace">動態記錄學生理解步調與盲點</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center -my-2"><div class="w-1 h-8 bg-emerald-200"></div></div>
-                            <div class="bg-emerald-50 p-4 rounded-xl shadow-sm border border-emerald-100 flex items-center gap-4 mr-8">
-                                <div class="w-12 h-12 bg-emerald-500 text-white rounded-lg flex items-center justify-center font-bold text-xl">⚙️</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 i18n" data-zh="計算統計學習模型" data-es="Modelo de Cálculo Estadístico" data-en="Statistical Computing Model">計算統計學習模型</h4>
-                                    <p class="text-xs text-emerald-700 i18n" data-zh="精準預測並客製化生成專屬語境練習" data-es="Generación de Front-end y ejercicios a medida" data-en="Generates tailored frontend and adaptive prompts">精準預測並客製化生成專屬語境練習</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text Content -->
-                    <div class="order-1 lg:order-2">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">EdTech / Philology</span>
-                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">LLM Personalization</span>
-                        </div>
-                        <h2 class="text-3xl font-bold text-slate-900 mb-6 i18n" data-zh="拉丁文智學計畫：超個人化語言建構" data-es="Clases de Latín con Asistencia de IA" data-en="AI-Assisted Latin Platform">拉丁文智學計畫：超個人化語言建構</h2>
-                        <p class="text-slate-600 mb-6 leading-relaxed i18n" data-zh="此項目打破傳統、通用且僵化的語言教學模式。結合遠端 Zoom 互動、課堂語音與文字筆記，利用 AI 的統計計算能力精確捕捉學生的認知遺漏與吸收步調。" data-es="Este proyecto rompe con los métodos de enseñanza de latín genéricos e impersonalizados. Basado en clases vía Zoom, el sistema utiliza las notas tomadas y registros de voz de la sesión para estructurar un modelo de aprendizaje adaptativo." data-en="This initiative dismantles generic, rigid language teaching methodologies. Utilizing live sessions along with text and voice note analytics, the system leverages statistical computing to model student gaps.">
-                            此項目打破傳統、通用且僵化的語言教學模式。結合遠端 Zoom 互動、課堂語音與文字筆記，利用 AI 的統計計算能力精確捕捉學生的認知遺漏與吸收步調。
-                        </p>
-                        <p class="text-slate-600 mb-8 leading-relaxed i18n" data-zh="課後，系統會自動編譯出一個專屬的互動式 Front-end 介面與精準提示詞（Prompts），讓學生能與大語言模型進行高契合度的課外實戰演練與客製化答題。" data-es="Al finalizar la clase, se genera un front-end personalizado para que el estudiante interactúe fuera del aula con un modelo de lenguaje, complementado con ejercicios tradicionales y basados en prompts hechos a medida." data-en="Post-class, the engine auto-compiles an interactive dedicated front-end interface, supplying the student with custom-piled prompts to practice with an LLM on tailored linguistic structures.">
-                            課後，系統會自動編譯出一個專屬的互動式 Front-end 介面與精準提示詞（Prompts），讓學生能與大語言模型進行高契合度的課外實戰演練與客製化答題。
-                        </p>
-                        <div class="flex justify-start">
-                            <a href="latin.html" class="bg-emerald-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-emerald-500 transition-all shadow-md shadow-emerald-600/20 i18n" data-zh="查看專案詳情" data-es="Ver detalles del proyecto" data-en="View Project Details">
-                                查看專案詳情 →
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <section id="contact" class="py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 i18n" data-zh="準備好結盟了嗎？" data-es="¿Preparado para forjar su alianza?" data-en="Ready to forge your alliance?">準備好結盟了嗎？</h2>
+            <p class="text-slate-400 mb-10 i18n" data-zh="我們不使用繁瑣的表單。如果您對我們的技術感興趣，或希望成為早期測試夥伴，請直接寄信至我們的官方信箱：" data-es="No utilizamos formularios tediosos. Si le interesa nuestra tecnología o desea ser un socio de pruebas, escríbanos directamente a:" data-en="We don't use tedious forms. If you're interested in our tech or want to be an early testing partner, email us directly at:">
+                我們不使用繁瑣的表單。如果您對我們的技術感興趣，或希望成為早期測試夥伴，請直接寄信至我們的官方信箱：
+            </p>
+            
+            <div class="inline-block">
+                <a href="mailto:info@arsligandi.com" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-xl text-xl font-bold transition-all backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    info@arsligandi.com
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Future Pipeline Prototype Section -->
-    <section class="py-12 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold text-slate-400 mb-2 i18n" data-zh="研發實驗室" data-es="Laboratorio de I+D" data-en="R&D Laboratory">研發實驗室</h2>
-            <p class="text-slate-500 italic i18n" data-zh="更多結合古典修辭學與自然語言處理（NLP）的交叉學術分析模型正在建構中..." data-es="Actualmente construyendo más modelos de análisis que combinan la retórica clásica con el Procesamiento del Lenguaje Natural (NLP)..." data-en="Currently building more analytical models combining classical rhetoric with Natural Language Processing (NLP)...">
-                更多結合古典修辭學與自然語言處理（NLP）的交叉學術分析模型正在建構中...
+            <p class="mt-8 text-xs text-slate-500 italic i18n" data-zh="* 我們承諾在 24 小時內由專案負責人親自回覆您的來信。" data-es="* Garantizamos una respuesta personal del director del proyecto en 24 horas." data-en="* We guarantee a personal response from the project lead within 24 hours.">
+                * 我們承諾在 24 小時內由專案負責人親自回覆您的來信。
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-slate-950 border-t border-slate-900 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500 flex flex-col items-center gap-4">
+    <footer class="py-12 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
             <p>© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
         </div>
     </footer>
 
-    <!-- JavaScript for Language Switcher -->
     <script>
         function changeLanguage(lang) {
             const elements = document.querySelectorAll('.i18n');
