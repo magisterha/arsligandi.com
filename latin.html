@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ars Ligandi | AI Assisted Latin Platform</title>
+    <meta name="description" content="Ecosistema inteligente de aprendizaje de latín basado en el ritmo cognitivo y cálculo estadístico.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .gradient-text-emerald { background: linear-gradient(90deg, #a7f3d0, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-emerald-900 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xs">Ω</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Ars Ligandi</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="proyectos.html" class="hover:text-emerald-600 transition-colors flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        <span class="i18n" data-zh="返回專案頁面" data-es="Volver a Proyectos" data-en="Back to Projects">返回專案頁面</span>
+                    </a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-600 font-medium focus:ring-0 cursor-pointer outline-none">
+                        <option value="zh">繁體中文</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-900">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-500 blur-[130px]"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest block mb-3 i18n" data-zh="教育科技與古典語言學的全新範式" data-es="Filología Clásica y Computación Avanzada" data-en="Classical Philology & Advanced Computing">教育科技與古典語言學的全新範式</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                <span class="i18n block" data-zh="人工智慧輔助拉丁文教學" data-es="Clases de Latín con Asistencia de IA" data-en="AI-Assisted Latin Ecosystem">人工智慧輔助拉丁文教學</span>
+                <span class="gradient-text-emerald i18n" data-zh="基於統計偏誤與個人化節奏的深度連結" data-es="Estrategia Didáctica basada en el Cálculo Estadístico" data-en="Statistical Modeling & Tailored Cognitive Pacing">基於統計偏誤與個人化節奏的深度連結</span>
+            </h1>
+            <p class="text-base md:text-lg text-slate-400 max-w-3xl mx-auto mb-4 leading-relaxed i18n" data-zh="遠離通用、死板且缺乏溫度的傳統大班制教材。本計畫深入挖掘大語言模型的計算潛力，精確描繪每位學生的核心盲點。" data-es="Adiós a los métodos de enseñanza genéricos e impersonalizados. Este proyecto aprovecha el potencial de computación y el cálculo estadístico de la IA para saber con extrema precisión las necesidades lingüísticas y el ritmo exacto de cada estudiante." data-en="Dismantling generic and impersonal textbooks. This initiative harnesses the computational and statistical architecture of AI to map out text comprehension speeds and learning curves down to individual error vectors.">
+                遠離通用、死板且缺乏溫度的傳統大班制教材。本計畫深入挖掘大語言模型的計算潛力，精確描繪每位學生的核心盲點。
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3 i18n" data-zh="系統運作架構藍圖" data-es="Arquitectura del Flujo de Aprendizaje" data-en="Learning Flow Architecture">系統運作架構藍圖</h2>
+            <p class="text-slate-500 text-sm i18n" data-zh="將課堂互動數據自動轉化為高度客製化的離線實戰引擎" data-es="Transformación de datos en tiempo real a un motor interactivo fuera de clase." data-en="Converting real-time classroom interactions into an offline practice pipeline.">將課堂互動數據自動轉化為高度客製化的離線實戰引擎</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">01</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="遠端 Zoom 互動與智能筆記" data-es="Clase Sincrónica y Notas" data-en="Synchronous Session & Analytics">遠端 Zoom 互動與智能筆記</h3>
+                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="在進行線上拉丁文授業時，系統會同時整理語音節奏、即時對答數據與課堂文本摘要，完整捕捉學生的答題盲點與語意理解盲區。" data-es="Durante la sesión en Zoom, se recopilan notas de voz y anotaciones estructuradas que alimentan el perfil analítico de la sesión, midiendo la velocidad de asimilación del alumno." data-en="During the Zoom class, text tracks and voice inflections are parsed to generate semantic notes mapping out structural performance and real-time conceptual intake.">
+                    在進行線上拉丁文授業時，系統會同時整理語音節奏、即時對答數據與課堂文本摘要，完整捕捉學生的答題盲點與語意理解盲區。
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">02</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="動態編譯專屬 Front-End" data-es="Compilación de Front-End" data-en="Dynamic Front-End Compilation">動態編譯專屬 Front-End</h3>
+                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="課堂結束後，系統會自動生成並交付一個精美的客製化前端介面。該介面封裝了針對該學生當前盲點而精心設計的專屬提示詞（Prompts）。" data-es="Al terminar la sesión, el motor compila un front-end interactivo que se le entrega al estudiante, adaptando la interfaz directamente a las flaquezas gramaticales detectadas." data-en="Post-class, the system instantly builds a highly context-aware front-end playground tailored with precise algorithmic prompt profiles targeting structural bottlenecks.">
+                    課堂結束後，系統會自動生成並交付一個精美的客製化前端介面。該介面封裝了針對該學生當前盲點而精心設計的專屬提示詞（Prompts）。
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 font-bold rounded-lg flex items-center justify-center mb-4 text-lg">03</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 i18n" data-zh="LLM 離線實戰與客製化練習" data-es="Práctica Con Modelo de Lenguaje" data-en="LLM Practice & Deep Learning">LLM 離線實戰與客製化練習</h3>
+                <p class="text-slate-600 text-sm leading-relaxed i18n" data-zh="學生可在課外通過該前端與大語言模型進行深度互動。无论是傳統語法解析，還是基於提示詞的對話練習，完全契合其個人的步調，做到真正的因材施教。" data-es="Fuera de clase, el estudiante practica con un modelo de lenguaje. Los ejercicios tradicionales o interactivos están totalmente guiados por la IA para reforzar los puntos exactos requeridos." data-en="Outside class, the student engages with an LLM via the compiled front-end. Traditional morphology or syntax trees are customized adaptively according to the calculated learning curve.">
+                    學生可在課外通過該前端與大語言模型進行深度互動。无论是傳統語法解析，還是基於提示詞的對話練習，完全契合其個人的步調，做到真正的因材施教。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-t border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-xl font-bold text-slate-900 mb-6 text-center i18n" data-zh="為何選擇 Ars Ligandi 的拉丁文智學系統？" data-es="¿Por qué la aproximación de Ars Ligandi al Latín?" data-en="Why Ars Ligandi's Approach to Latin?">為何選擇 Ars Ligandi 的拉丁文智學系統？</h3>
+            <div class="space-y-6 text-slate-700 leading-relaxed text-sm">
+                <p class="i18n" data-zh="傳統的拉丁文教材（如 generic text-books）往往無視學生的母語背景與認知速度差異，提供千篇一律的語法灌輸。我們深知拉丁文作為一種高度屈折語（Highly Inflected Language），其格位變化與句法結構需要極其严密的邏輯矩陣思維。" data-es="Los métodos genéricos e impersonalizados de latín ignoran el hecho de que cada mente procesa las declinaciones y la sintaxis a ritmos categóricamente distintos. Al utilizar el cálculo estadístico de la IA, podemos trazar un mapa de asimilación sintáctica en tiempo real." data-en="Generic Latin textbooks ignore individual cognitive variances in decoding high-inflection language syntaxes. By blending structural philology with statistical ML modeling, we provide clear-cut vector adjustments for maximum retention.">
+                    傳統的拉丁文教材（如 generic text-books）往往無視學生的母語背景與認知速度差異，提供千篇一律的語法灌輸。我們深知拉丁文作為一種高度屈折語（Highly Inflected Language），其格位變化與句法結構需要極其严密的邏輯矩陣思維。
+                </p>
+                <p class="i18n" data-zh="透過將課堂語音筆記數據化，AI 能夠精準計算出學生的語法偏誤概率。生成的課後互動 Front-end，讓大語言模型不再只是模糊地回答問題，而是扮演一位完全洞悉學生目前學習瓶頸的專屬蘇格拉底式導師。" data-es="Las notas de voz tomadas y procesadas actúan como un sensor filológico. El front-end resultante canaliza el potencial computacional del LLM para guiar al estudiante de forma ultra-específica, optimizando cada minuto invertido fuera del horario síncronico." data-en="Voice notes and diagnostic notes act as philological sensors. The generated front-end channels the LLM capacity to act as a tailored Socratic guide, optimizing every minute spent outside the synchronous class.">
+                    透過將課堂語音筆記數據化，AI 能夠精準計算出學生的語法偏誤概率。生成的課後互動 Front-end，讓大語言模型不再只是模糊地回答問題，而是扮演一位完全洞悉學生目前學習瓶頸的專屬蘇格拉底式導師。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-950 text-center text-sm text-slate-500">
+        <p>© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('.i18n');
+            elements.forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) { el.textContent = text; }
+            });
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
+        }
+    </script>
+</body>
+</html>
