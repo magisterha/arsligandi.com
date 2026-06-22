@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modus Iudicandi | Ars Ligandi</title>
+    <meta name="description" content="Predicción estratégica basada en el patrón de razonamiento judicial.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dark-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 dark-glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-white uppercase">Ars Ligandi</span>
+                </a>
+                
+                <div class="flex items-center gap-4">
+                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-300 font-medium focus:ring-0 cursor-pointer outline-none">
+                        <option value="zh">繁體中文</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[10%] left-[20%] w-[30%] h-[30%] rounded-full bg-indigo-600 blur-[120px]"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-semibold tracking-wider uppercase i18n" data-zh="專案代號：Modus Iudicandi" data-es="Proyecto: Modus Iudicandi" data-en="Project: Modus Iudicandi">
+                專案代號：Modus Iudicandi
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                <span class="i18n block" data-zh="精準預測法官的" data-es="Anticipe el razonamiento de" data-en="Anticipate the reasoning of">精準預測法官的</span>
+                <span class="gradient-text i18n" data-zh="裁判風格與論理心證" data-es="la judicatura" data-en="the judiciary">裁判風格與論理心證</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed i18n" data-zh="我們運用封閉式 AI 代理人，在夜間為您深度精讀數百份特定法官的歷史裁判書。將海量文本化為高密度的戰術情報，大幅降低您的認知負荷。" data-es="Utilizamos agentes de IA en un entorno cerrado para realizar una lectura profunda de cientos de sentencias de un juez específico durante la noche. Transformamos texto masivo en inteligencia táctica, reduciendo drásticamente su carga cognitiva." data-en="We use closed-environment AI agents to deep-read hundreds of rulings from a specific judge overnight. We transform massive text into tactical intelligence, drastically reducing your cognitive load.">
+                我們運用封閉式 AI 代理人，在夜間為您深度精讀數百份特定法官的歷史裁判書。將海量文本化為高密度的戰術情報，大幅降低您的認知負荷。
+            </p>
+        </div>
+    </section>
+
+    <!-- Operational Workflow -->
+    <section class="py-20 bg-slate-800/50 border-y border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4 i18n" data-zh="24小時高階諮詢工作流" data-es="Flujo de Trabajo Pericial de 24 Horas" data-en="24-Hour Premium Workflow">24小時高階諮詢工作流</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="dark-glass p-8 rounded-2xl relative">
+                    <div class="absolute -top-5 left-8 bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3 i18n" data-zh="極簡輸入，絕對保密" data-es="Input Mínimo, Privacidad Absoluta" data-en="Minimal Input, Absolute Privacy">極簡輸入，絕對保密</h3>
+                    <p class="text-slate-400 i18n" data-zh="無須提供當事人機密。僅需透過專屬通道告知「受案法官姓名」與「核心事實摘要」。" data-es="No requiere datos confidenciales del cliente. Solo indíquenos el 'Nombre del Juez' y un 'Resumen de los Hechos'." data-en="No confidential client data required. Just provide the 'Judge's Name' and a 'Summary of Facts'.">無須提供當事人機密。僅需透過專屬通道告知「受案法官姓名」與「核心事實摘要」。</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="dark-glass p-8 rounded-2xl relative">
+                    <div class="absolute -top-5 left-8 bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3 i18n" data-zh="夜間算力與專家審核" data-es="Computación Nocturna y Auditoría" data-en="Overnight Computing & Auditing">夜間算力與專家審核</h3>
+                    <p class="text-slate-400 i18n" data-zh="私有伺服器於夜間自動調閱並分析該法官之歷年判決，隨後由專家進行語意邏輯的品質校準。" data-es="Nuestros servidores privados procesan el historial del magistrado durante la noche, seguido de una estricta auditoría humana de calidad." data-en="Private servers process the judge's history overnight, followed by a strict human quality audit.">私有伺服器於夜間自動調閱並分析該法官之歷年判決，隨後由專家進行語意邏輯的品質校準。</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="dark-glass p-8 rounded-2xl relative">
+                    <div class="absolute -top-5 left-8 bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-3 i18n" data-zh="交付戰略分析報告" data-es="Entrega del Memorando Táctico" data-en="Delivery of Tactical Memorandum">交付戰略分析報告</h3>
+                    <p class="text-slate-400 i18n" data-zh="24 工作小時內，您將收到一份高密度的 PDF 報告，精準指出法官的思維盲點與論理偏好。" data-es="En 24 horas hábiles, recibirá un informe PDF de alta densidad señalando las preferencias y precedentes fetiche del juez." data-en="Within 24 business hours, receive a high-density PDF report detailing the judge's preferences and core precedents.">24 工作小時內，您將收到一份高密度的 PDF 報告，精準指出法官的思維盲點與論理偏好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-800 rounded-3xl p-10 border border-slate-700 shadow-2xl">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center i18n" data-zh="為何選擇專屬 AI 顧問服務？" data-es="¿Por qué este modelo de Consultoría IA?" data-en="Why this AI Consulting model?">為何選擇專屬 AI 顧問服務？</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-cyan-500/20 p-2 rounded-lg text-cyan-400"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg i18n" data-zh="無須適應新軟體" data-es="Cero Fricción Tecnológica" data-en="Zero Technological Friction">無須適應新軟體</h4>
+                            <p class="text-slate-400 text-sm mt-1 i18n" data-zh="這不是需要您親自操作的 SaaS 平台。我們負責所有繁雜的資料探勘，您只負責接收最終的戰略成果。" data-es="No es un SaaS genérico. Nosotros operamos la tecnología en la trastienda; usted simplemente recibe el resultado en su mesa." data-en="Not a generic SaaS. We operate the tech in the background; you simply receive the polished result.">這不是需要您親自操作的 SaaS 平台。我們負責所有繁雜的資料探勘，您只負責接收最終的戰略成果。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-cyan-500/20 p-2 rounded-lg text-cyan-400"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg></div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg i18n" data-zh="區域與領域的獨占性" data-es="Exclusividad por Jurisdicción" data-en="Jurisdictional Exclusivity">區域與領域的獨占性</h4>
+                            <p class="text-slate-400 text-sm mt-1 i18n" data-zh="我們為核心夥伴提供特定法律領域的排他性協議，確保您的對手無法取得相同的法官心證預測優勢。" data-es="Ofrecemos acuerdos de exclusividad de área a nuestros socios fundadores, garantizando que su competencia no acceda a esta información." data-en="We offer area exclusivity agreements to our founding partners, ensuring competitors cannot access this edge.">我們為核心夥伴提供特定法律領域的排他性協議，確保您的對手無法取得相同的法官心證預測優勢。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Contact -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-6 i18n" data-zh="索取測試報告或預約專案會議" data-es="Solicite un Informe de Prueba" data-en="Request a Sample Report">索取測試報告或預約專案會議</h2>
+            <a href="mailto:consultoriahispanochina@gmail.com" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-bold text-lg transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                consultoriahispanochina@gmail.com
+            </a>
+            <p class="mt-8 text-sm text-slate-600">© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">位於台灣台北</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('.i18n');
+            elements.forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) { el.textContent = text; }
+            });
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
+        }
+    </script>
+</body>
+</html>
