@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría de IA Boutique | Ars Ligandi</title>
+    <meta name="description" content="Soluciones ágiles de Inteligencia Artificial. Arquitecturas de agentes y RAG sin burocracia corporativa.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(90deg, #f8fafc, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                    </div>
+                    <a href="index.html" class="text-xl font-bold tracking-tight text-slate-900 uppercase hover:text-indigo-600 transition-colors">Ars Ligandi</a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="hover:text-indigo-600 transition-colors i18n" data-zh="首頁" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="#filosofia" class="hover:text-indigo-600 transition-colors i18n" data-zh="精品哲學" data-es="Filosofía Boutique" data-en="Boutique Philosophy">Filosofía Boutique</a>
+                    <a href="#servicios" class="hover:text-indigo-600 transition-colors i18n" data-zh="核心服務" data-es="Servicios" data-en="Services">Servicios</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <select id="langSwitch" onchange="changeLanguage(this.value)" class="text-sm border-none bg-transparent text-slate-600 font-medium focus:ring-0 cursor-pointer outline-none">
+                        <option value="es" selected>Español</option>
+                        <option value="en">English</option>
+                        <option value="zh">繁體中文</option>
+                    </select>
+                    <a href="#contact" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm i18n" data-zh="聯絡我們" data-es="Contactar" data-en="Contact Us">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-500 blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-500 blur-[120px]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-semibold tracking-wider uppercase w-max i18n" data-zh="AI 顧問服務" data-es="Consultoría de IA" data-en="AI Consulting">
+                Consultoría de IA
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                <span class="i18n block" data-zh="無需企業官僚作風。" data-es="Sin burocracia corporativa." data-en="No corporate bureaucracy.">Sin burocracia corporativa.</span>
+                <span class="gradient-text i18n" data-zh="專注於純粹的效能與敏捷" data-es="Solo eficacia, precisión y agilidad" data-en="Just efficacy, precision, and agility">Solo eficacia, precisión y agilidad</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed i18n" data-zh="傳統顧問公司耗時數月撰寫冗長的報告。身為精品 AI 架構師，我們利用代理人系統與現代資料庫，在數週內為您解決實際的營運瓶頸。" data-es="Las consultoras tradicionales tardan meses en entregar informes. Como arquitectos de IA Boutique, ensamblamos sistemas de agentes y bases de datos vectoriales para resolver sus cuellos de botella operativos en semanas." data-en="Traditional consultancies take months to deliver reports. As Boutique AI architects, we assemble agentic systems and vector databases to solve your operational bottlenecks in weeks.">
+                Las consultoras tradicionales tardan meses en entregar informes. Como arquitectos de IA Boutique, ensamblamos sistemas de agentes y bases de datos vectoriales para resolver sus cuellos de botella operativos en semanas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filosofía Boutique vs Tradicional -->
+    <section id="filosofia" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 i18n" data-zh="為何選擇精品模式？" data-es="¿Por qué el modelo Boutique?" data-en="Why the Boutique model?">¿Por qué el modelo Boutique?</h2>
+                <p class="text-slate-600 i18n" data-zh="我們不賣品牌光環，我們只交付能立即提升 ROI 的技術架構。" data-es="No vendemos humo corporativo. Entregamos arquitecturas técnicas que generan un ROI inmediato." data-en="We don't sell corporate fluff. We deliver technical architectures that generate immediate ROI.">No vendemos humo corporativo. Entregamos arquitecturas técnicas que generan un ROI inmediato.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Modelo Tradicional -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm opacity-70">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-500">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 i18n" data-zh="傳統科技顧問" data-es="Consultora Tradicional" data-en="Traditional Consultancy">Consultora Tradicional</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start gap-2"><span class="text-red-400">✗</span> <span class="i18n" data-zh="龐大的客製化軟體開發 (需時 6-12 個月)" data-es="Desarrollo de software pesado (6 a 12 meses)" data-en="Heavy software development (6 to 12 months)">Desarrollo de software pesado (6 a 12 meses)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-400">✗</span> <span class="i18n" data-zh="天文數字的初期策略評估費用" data-es="Presupuestos astronómicos solo por la auditoría inicial" data-en="Astronomical budgets just for the initial audit">Presupuestos astronómicos solo por la auditoría inicial</span></li>
+                        <li class="flex items-start gap-2"><span class="text-red-400">✗</span> <span class="i18n" data-zh="技術堆疊僵化，難以適應最新模型" data-es="Stack tecnológico rígido y difícil de iterar" data-en="Rigid tech stack, hard to iterate">Stack tecnológico rígido y difícil de iterar</span></li>
+                    </ul>
+                </div>
+                <!-- Modelo Boutique -->
+                <div class="bg-slate-900 p-8 rounded-2xl border border-cyan-500/30 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg class="w-24 h-24 text-cyan-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="flex items-center gap-3 mb-6 relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 border border-cyan-500/50">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white i18n" data-zh="Ars Ligandi 精品實作" data-es="Implementación Ars Ligandi" data-en="Ars Ligandi Implementation">Implementación Ars Ligandi</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 relative z-10">
+                        <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> <span class="i18n" data-zh="組裝現有強大工具 (Supabase, 語言模型)，2-4 週上線" data-es="Ensamblaje de herramientas (Modelos, Supabase) en 2-4 semanas" data-en="Tool assembly (Models, Supabase) delivered in 2-4 weeks">Ensamblaje de herramientas (Modelos, Supabase) en 2-4 semanas</span></li>
+                        <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> <span class="i18n" data-zh="針對特定痛點對症下藥，成本合理" data-es="Enfoque quirúrgico en un cuello de botella específico" data-en="Surgical focus on a specific bottleneck">Enfoque quirúrgico en un cuello de botella específico</span></li>
+                        <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> <span class="i18n" data-zh="完全模組化，隨時可替換最新一代的 AI 模型" data-es="Modularidad total: integramos el mejor modelo disponible hoy" data-en="Total modularity: we integrate the best model available today">Modularidad total: integramos el mejor modelo disponible hoy</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Core -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-16 text-center i18n" data-zh="專屬解決方案架構" data-es="Arquitecturas de Solución" data-en="Solution Architectures">Arquitecturas de Solución</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 i18n" data-zh="專屬 RAG 知識庫檢索" data-es="RAG Agéntico Específico" data-en="Specific Agentic RAG">RAG Agéntico Específico</h3>
+                    <p class="text-slate-600 leading-relaxed i18n" data-zh="針對您的專業文獻（法律、學術、技術）建立無幻覺的檢索增強生成系統，讓資料庫成為您最聰明的智庫。" data-es="Construimos sistemas de Recuperación Aumentada (RAG) sobre su propia documentación legal o técnica. Cero alucinaciones, respuestas basadas estrictamente en sus datos." data-en="We build Retrieval-Augmented Generation (RAG) systems over your own legal or technical documentation. Zero hallucinations, strictly data-driven answers.">
+                        Construimos sistemas de Recuperación Aumentada (RAG) sobre su propia documentación legal o técnica. Cero alucinaciones, respuestas basadas estrictamente en sus datos.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
+                    <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 i18n" data-zh="流程自動化 (LaaP / SaaS)" data-es="Automatización (LaaP)" data-en="Automation (LaaP)">Automatización (LaaP)</h3>
+                    <p class="text-slate-600 leading-relaxed i18n" data-zh="將傳統的服務轉化為數位產品。例如：自動分類法務證據、萃取關鍵條款，並由多個 AI 代理人協同生成初步報告。" data-es="Transformamos servicios en productos (Legal-as-a-Product). Orquestamos agentes que clasifican evidencias, extraen cláusulas y redactan informes preliminares de forma automática." data-en="We transform services into products (Legal-as-a-Product). We orchestrate agents that classify evidence, extract clauses, and draft preliminary reports automatically.">
+                        Transformamos servicios en productos (Legal-as-a-Product). Orquestamos agentes que clasifican evidencias, extraen cláusulas y redactan informes preliminares de forma automática.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 i18n" data-zh="日常管理降載" data-es="Delegación Administrativa" data-en="Administrative Delegation">Delegación Administrativa</h3>
+                    <p class="text-slate-600 leading-relaxed i18n" data-zh="部署能自主讀取收件匣、更新客戶關係管理系統 (CRM) 並安排會議的自主代理，為您每週省下數十小時的繁瑣工作。" data-es="Despliegue de agentes autónomos que gestionan bandejas de entrada, actualizan bases de datos y extraen metadatos para ahorrarle decenas de horas semanales." data-en="Deployment of autonomous agents that manage inboxes, update databases, and extract metadata to save you dozens of hours every week.">
+                        Despliegue de agentes autónomos que gestionan bandejas de entrada, actualizan bases de datos y extraen metadatos para ahorrarle decenas de horas semanales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 i18n" data-zh="消除企業摩擦，從今天開始" data-es="Elimine la fricción operativa hoy mismo" data-en="Eliminate operational friction today">Elimine la fricción operativa hoy mismo</h2>
+            <p class="text-slate-400 mb-10 i18n" data-zh="告訴我們您目前最耗時的工作流程。我們將評估是否能透過輕量級的 AI 代理系統為您解決。" data-es="Cuéntenos cuál es el cuello de botella que más tiempo consume en su despacho o empresa. Evaluaremos su viabilidad para una solución agéntica rápida." data-en="Tell us about your most time-consuming bottleneck. We will evaluate its viability for a rapid agentic solution.">
+                Cuéntenos cuál es el cuello de botella que más tiempo consume en su despacho o empresa. Evaluaremos su viabilidad para una solución agéntica rápida.
+            </p>
+            
+            <div class="inline-block">
+                <a href="mailto:consultoriahispanochina@gmail.com" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-xl text-xl font-bold transition-all backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    consultoriahispanochina@gmail.com
+                </a>
+            </div>
+            <p class="mt-8 text-xs text-slate-500 italic i18n" data-zh="* 我們承諾在 24 小時內由專案負責人親自回覆您的來信。" data-es="* Garantizamos una respuesta personal del arquitecto del proyecto en 24 horas." data-en="* We guarantee a personal response from the project architect within 24 hours.">
+                * Garantizamos una respuesta personal del arquitecto del proyecto en 24 horas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+            <p>© 2026 Ars Ligandi. <span class="i18n" data-zh="位於台灣台北" data-es="Sede en Taipéi, Taiwán" data-en="Based in Taipei, Taiwan">Sede en Taipéi, Taiwán</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('.i18n');
+            elements.forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) { el.textContent = text; }
+            });
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
+        }
+    </script>
+</body>
+</html>
