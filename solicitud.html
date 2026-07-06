@@ -92,51 +92,22 @@
                                 class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-none"></textarea>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <!-- Prioridad -->
-                            <div>
-                                <label class="block text-sm font-medium text-slate-300 mb-3">分析請求的優先級</label>
-                                <div class="space-y-3">
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="radio" name="entry.767559107" value="普通" required class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">普通 (Normal)</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="radio" name="entry.767559107" value="緊急" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">緊急 (Urgente)</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="radio" name="entry.767559107" value="非常緊急" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">非常緊急 (Muy Urgente)</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Tipo de documento -->
-                            <div>
-                                <label class="block text-sm font-medium text-slate-300 mb-3">文件類型（可複選）</label>
-                                <div class="space-y-3">
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="checkbox" name="entry.TU_ENTRY_DOCUMENTO_AQUI" value="法律意見書" class="w-4 h-4 rounded text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">法律意見書</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="checkbox" name="entry.TU_ENTRY_DOCUMENTO_AQUI" value="判決書" class="w-4 h-4 rounded text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">判決書</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="checkbox" name="entry.TU_ENTRY_DOCUMENTO_AQUI" value="合約分析" class="w-4 h-4 rounded text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">合約分析</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="checkbox" name="entry.TU_ENTRY_DOCUMENTO_AQUI" value="訴訟文件" class="w-4 h-4 rounded text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">訴訟文件</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer group">
-                                        <input type="checkbox" name="entry.TU_ENTRY_DOCUMENTO_AQUI" value="其他" class="w-4 h-4 rounded text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
-                                        <span class="text-slate-400 group-hover:text-slate-200 transition-colors">其他</span>
-                                    </label>
-                                </div>
+                        <!-- Prioridad -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-medium text-slate-300 mb-3">分析請求的優先級</label>
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                                <label class="flex items-center space-x-3 cursor-pointer group">
+                                    <input type="radio" name="entry.767559107" value="普通" required class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
+                                    <span class="text-slate-400 group-hover:text-slate-200 transition-colors">普通 (Normal)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group">
+                                    <input type="radio" name="entry.767559107" value="緊急" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
+                                    <span class="text-slate-400 group-hover:text-slate-200 transition-colors">緊急 (Urgente)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer group">
+                                    <input type="radio" name="entry.767559107" value="非常緊急" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500">
+                                    <span class="text-slate-400 group-hover:text-slate-200 transition-colors">非常緊急 (Muy Urgente)</span>
+                                </label>
                             </div>
                         </div>
 
